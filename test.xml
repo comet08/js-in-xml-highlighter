@@ -1,0 +1,20 @@
+<file name="admin/view/template/sale/order_list.tpl">
+    <operation>
+      <search position="before"><![CDATA[<?php echo $footer; ?>]]></search>
+      <add><![CDATA[        
+<script type="text/javascript">   
+
+    if(test) {
+        return true;
+    } "test"
+
+    ,
+    
+
+         ]]>
+         
+         32223
+        
+        </add>
+    </operation>
+</file>

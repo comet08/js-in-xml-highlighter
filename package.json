@@ -1,0 +1,25 @@
+{
+  "name": "xml",
+  "displayName": "XML",
+  "description": "XML for Ucube",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.72.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "xml",
+      "aliases": ["XML for UCube", "xml"],
+      "extensions": [".xml"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "xml",
+      "scopeName": "source.xml",
+      "path": "./syntaxes/xml.tmLanguage.json"
+    }]
+  }
+}

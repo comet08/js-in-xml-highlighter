@@ -1,0 +1,108 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "XML for UCube",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#boolean"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#terms"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+			{
+				"name": "keyword.control.xml",
+				"match": "\\b(if|else if|else|while|for|return|switch|break|continue)\\b"
+			},
+			{
+				"name": "keyword.operator.xml",
+				"match": "\\b(var|let|const|function)\\b"
+			}
+			]
+		},
+		"terms": {
+			"patterns": [
+			  {
+				"name": "entity.name.label.xml",
+				"match": "([a-z][a-z0-9]*(?:-[a-z0-9]+)*)"
+			  },
+			  {
+				"name": "keyword.control.conditional.xml",
+				"begin": "on*",
+				"end": "\\)",
+				"patterns": [
+				  
+				]
+			}
+			]
+		  },
+		  "strings": {
+			"name": "string.myscript",
+			"begin": "\\<",
+			"end": "\\>",
+			"patterns": [
+			  {
+				"name": "constant.character.escape.myscript",
+				"match": "\\\\."
+			  },
+			  {
+				"name": "punctuation.term.myscript",
+				"begin": "\\{",
+				"beginCaptures": {
+				  "0": {
+					"name": "meta.brace.curly.myscript"
+				  }
+				},
+				"end": "\\}",
+				"endCaptures": {
+				  "0": {
+					"name": "meta.brace.curly.myscript"
+				  }
+				},
+				"patterns": [
+				  {
+					"include": "#terms"
+				  },
+				  {
+					"include": "#numbers"
+				  },
+				  {
+					"include": "#strings"
+				  }
+				]
+			  }
+			]
+		},
+		"boolean": {
+			"name": "string.quoted.double.xml",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "entity.name.type.xml",
+					"match": "\\b(true|false)\\b"
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric.integer.xml",
+					"match": "\\b(\\d+)\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.xml"
+}
