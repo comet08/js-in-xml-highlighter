@@ -1,3 +1,7 @@
+https://github.com/microsoft/vscode/blob/main/extensions/javascript/syntaxes/JavaScript.tmLanguage.json
+JS 기본 하이라이터 사용
+
+
 # xml README
 
 This is the README for your extension "xml". After writing up a brief description, we recommend including the following sections.
