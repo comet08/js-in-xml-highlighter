@@ -1,20 +1,21 @@
-<file name="admin/view/template/sale/order_list.tpl">
-    <operation>
-      <search position="before"><![CDATA[<?php echo $footer; ?>]]></search>
-      <add><![CDATA[        
-<script type="text/javascript">   
-
-    if(test) {
-        return true;
-    } "test"
-
-    ,
-    
-
-         ]]>
-         
-         32223
+<?xml version="1.0" encoding="UTF-8"?>
+<element attribute="value">
+             
+    <childElement>
         
-        </add>
-    </operation>
-</file>
+    </childElement>
+
+    <script type = "text/javascript" lazy="false">
+    <![CDATA[
+    scwin.test = "test"
+
+    scwin.onload = function() {
+
+
+    }
+    var test = "test";
+
+    ]]>
+    </script>
+             
+</element>
